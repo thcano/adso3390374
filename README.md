@@ -15,6 +15,10 @@
 |03. | CSS         | Look & Feel - Cascading Style Sheet  |
 |04. | JavaScript  | Behavior - Program & Styling         |
 
+---
+
+![profile](/src/imgs/profile_pic.png)
+
 [ADSO Files Drive](https://tinyurl.com/wnkk334u)
 
 [VERCEL URL](https://vercel.app)
