@@ -1,33 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/master.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/master.css" />
     <title>01-Emmet</title>
 </head>
+
 <body class="emmet">
     <a href="../index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H48V120l80-80,80,80Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8H216a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H48V120l80-80,80,80Z">
+            </path>
+        </svg>
     </a>
     <main>
         <header>
             <h1>01-Emmet</h1>
-            <img src="../src/imgs/logo-emmet.svg" alt="Emmet">
+            <img src="../src/imgs/logo-emmet.svg" alt="Emmet" />
             <h4>Plugin for faster HTML and CSS coding</h4>
         </header>
         <section>
             <h2>01-Child<em> > </em></h2>
-            <p>Creates child elements (nesting)</p>
+            <p>Creates child elements (nesting).</p>
             <h4>Example:</h4>
-            <p>ul>li>a</p>
+            <p>ul>li>a↔️</p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li><a href=""></a></li>
+                </ul>
+            </xmp>
+        </section>
+        <section>
+            <h2>02-Sibling<em> + </em></h2>
+            <p>Creates sibling elements.</p>
+            <h4>Example:</h4>
+            <p>header+section+footer↔️</p>
+            <h4>Result:</h4>
+            <xmp>
+                <header></header>
+                <section></section>
+                <footer></footer>
+            </xmp>
+        </section>
+        <section>
+            <h2>03-Multiplication<em style="padding-top: 1.4rem"> * </em></h2>
+            <p>Repeats elements multiple times. </p>
+            <h4>Example:</h4>
+            <p>ul>li*3 ↔️</p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </xmp>
+        </section>
+        <section>
+            <h2>04-Class<em style="padding-bottom: 1.4rem"> . </em></h2>
+            <p>Selects all elements that have the specified class.</p>
+            <h4>Examples:</h4>
+            <p>div.contenedor↔️</p>
+            <h4>Result:</h4>
+            <xmp>
+                <div class="contenedor"></div>
+            </xmp>
+        </section>
+        <section>
+            <h2>05-Classes<em style="padding-bottom: 1.4rem"> ... </em></h2>
+            <p>Creates multiple class attributes.</p>
+            <h4>Examples:</h4>
+            <p>div.clase1.clase2.clasen ↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<div class="clase1 clase2 clasen"><div>
+</xmp>
+        </section>
+        <section>
+            <h2>06-ID Selector<em style="font-size: 1.6rem"> # </em></h2>
+            <p>Selects a single element with the specified ID.</p>
+            <h4>Example:</h4>
+            <p>nav#menu ↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<nav id="menu"></nav>
+</xmp>
+        </section>
+        <section>
+            <h2>07-Insert Text<em style="font-size: 1.6rem"> {} </em></h2>
+            <p>Inserts the specified text content inside the element.</p>
+            <h4>Example:</h4>
+            <p>div{Lorem Ipsum Dolor} ↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<div>Lorem Ipsum Dolor</div>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.4rem">08-Custom Attribute<em style="font-size: 1.6rem"> [] </em></h2>
+            <p>Creates custom attributes.</p>
+            <h4>Example:</h4>
+            <p>a[href=www.google.com]↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<a href="www.google.com"></a>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.4rem">09-Item Numbering<em style="font-size: 1.6rem"> $ </em></h2>
+            <p>Adds consecutive numbers.</p>
+            <h4>Example:</h4>
+            <p>ul>li.num$*3↔️</p>
             <h4>Result:</h4>
 <xmp>
 <ul>
-    <li><a href=""></a></li>
+    <li class="num1"></li>
+    <li class="num2"></li>
+    <li class="num3"></li>
 </ul>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">10-Reverse Numbering<em style="font-size: 1.3rem"> @- </em></h2>
+            <p>Inverts numbering order. </p>
+            <h4>Example:</h4>
+            <p>ul>li.num$@-3↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<ul>
+    <li class="num3"></li>
+    <li class="num2"></li>
+    <li class="num1"></li>
+</ul>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">11-Base Numbering<em style="font-size: 1.3rem"> @n </em></h2>
+            <p>Defines a base number for sequences.</p>
+            <h4>Example:</h4>
+            <p>ul>li.num$@3*4↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<ul>
+    <li class="num3"></li>
+    <li class="num4"></li>
+    <li class="num5"></li>
+    <li class="num6"></li>
+</ul>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">12-Climb Up<em style="font-size: 1.3rem"> ^ </em></h2>
+            <p>Moves up one level.</p>
+            <h4>Example:</h4>
+            <p>section>article>div^p↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<section>
+    <article>
+        <div></div>
+    </article>
+    <p></p>
+</section>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">13-Grouping<em style="font-size: 1.3rem"> ( ) </em></h2>
+            <p>Groups elements together.</p>
+            <h4>Example:</h4>
+            <p>(header>nav)(section>article)↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<header>
+    <nav></nav>
+</header>
+<section>
+    <article></article>
+</section>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">14-Lorem<em style="font-size: 0.7rem"> lorem </em></h2>
+            <p>Generates placeholder text.</p>
+            <h4>Example:</h4>
+            <p>lorem↔️</p>
+            <h4>Result:</h4>
+<xmp style="font-size: 0.6rem">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+Cum molestias in doloribus quidem impedit ut veniam rerum id veritatis,
+ullam sed ea fugit ipsam blanditiis. Provident animi quo atque deleniti.
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">15-HTML Documents<em style="font-size: 0.7rem"> html: </em></h2>
+            <p>Creates various HTML document types.</p>
+            <h4>Example:</h4>
+            <p>html:xs↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<html:xs> </html:xs>
+</xmp>
+        </section>
+        <section>
+            <h2 style="font-size: 1.3rem">16-Meta Tags<em style="font-size: 1.3rem"> ( ) </em></h2>
+            <p>Generates meta tags.</p>
+            <h4>Example:</h4>
+            <p>meta:vp↔️</p>
+            <h4>Result:</h4>
+<xmp>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </xmp>
         </section>
     </main>
 </body>
+
 </html>

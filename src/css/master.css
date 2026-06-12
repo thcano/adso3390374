@@ -205,7 +205,7 @@ body {
         border-radius: 0.4rem;
         color: #70BB14;
         justify-content: center;
-        display: flex;
+        display: flex; 
       }
     }
   }
