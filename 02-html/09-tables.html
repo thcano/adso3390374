@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-tables</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+            thead {
+                th {
+                    background-color: #0000008a;
+                    padding: 0.4rem 0.6rem;
+                }
+            }
+
+            tbody {
+                tr {
+                    &:first-of-type {
+                        border-top: 1px solid #fff;
+                    }
+
+                    &:nth-child(even) {
+                        background-color: rgba(66, 64, 64, 0.445);
+                    }
+                }
+
+                td {
+                    border-bottom: 1px solid #fff;
+                    font-size: 0.8rem;
+                    padding: 0.4rem;
+                    text-align: center;
+                }
+            }
+
+            tfoot {
+                background-color: #00000062;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="html">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="#e8e8e8" viewBox="0 0 256 256">
+            <path
+                d="M232,184a8,8,0,0,1-16,0A88,88,0,0,0,65.78,121.78L43.4,144H88a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V88a8,8,0,0,1,16,0v44.77l22.48-22.33A104,104,0,0,1,232,184Z">
+            </path>
+        </svg> </a>
+    <main>
+        <header class="mainmenu">
+            <h1>09-tables</h1>
+            <h4>Creates tables for data display. </h4>
+        </header>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Full name</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Hormero Simpson</td>
+                        <td>123446</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>March Simpson</td>
+                        <td>198742</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Bart Simpson</td>
+                        <td>983874</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Lisa Simpson</td>
+                        <td>748343</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Maggie Simpson</td>
+                        <td>877425</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Simpson Family</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
