@@ -26,6 +26,31 @@
                 background-size: 76px;
                 background-repeat: repeat-x;
             }
+
+            &.box4 {
+                background-image: url(imgs/mario.png);
+                background-size: 76px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            &.box5 {
+                background-image: url(imgs/mario.png);
+                background-size: 76px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                /* cover es usado para imagenes muy anchas, contain las ajusta a lo largo */
+                /* Shorthand para ahorrar todo el código anterior*/
+                /* background: url(imgs/mario.png) no-repeat center right /contain; */
+            }
+
+            &.box6 {
+                background-image: url(imgs/mario.png);
+                background-size: 46px;
+                background-attachment: fixed;
+                margin-bottom: 10rem;
+            }
         }
     </style>
 </head>

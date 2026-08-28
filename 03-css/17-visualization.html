@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 - Visualization</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        .demo-block {
+            background: #fff5;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .demo-block h4 {
+            margin-top: 0;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 4px;
+            margin: 4px;
+            background: #007bff;
+        }
+
+        .square:nth-child(1) {
+            background: #e74c3c;
+        }
+
+        .square:nth-child(2) {
+            background: #3498db;
+        }
+
+        .square:nth-child(3) {
+            background: #2ecc71;
+        }
+
+        .square:nth-child(4) {
+            background: #f1c40f;
+            color: #000;
+        }
+
+        .square:nth-child(5) {
+            background: #9b59b6;
+        }
+
+        .square:nth-child(6) {
+            background: #e67e22;
+        }
+
+        .display-demo .square-5 {
+            display: none;
+        }
+
+        .visibility-demo .square-5 {
+            visibility: hidden;
+        }
+
+        .overflow-container {
+            width: 280px;
+            height: 120px;
+            background: #e9ecef;
+            border: 2px solid #ced4da;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 8px 10px 8px 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .overflow-container p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #212529;
+        }
+
+        .overflow-visible {
+            overflow: visible;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+        }
+
+        .zindex-demo {
+            position: relative;
+            height: 190px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .z-box {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .z-box-1 {
+            background: #e74c3c;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        .z-box-2 {
+            background: #3498db;
+            top: 50px;
+            left: 60px;
+            z-index: 2;
+        }
+
+        .z-box-3 {
+            background: #2ecc71;
+            top: 80px;
+            left: 100px;
+            z-index: 3;
+        }
+
+        .z-box-4 {
+            background: #f1c40f;
+            color: #000;
+            top: 30px;
+            left: 130px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>17 - Visualization</h1>
+            <ul>
+                <li>Display: block|inline|none|flex|grid</li>
+                <li>Visibility: visible|hidden</li>
+                <li>Overflow: visible|hidden|scroll|auto</li>
+                <li>Z-Index: 1...n</li>
+            </ul>
+        </header>
+        <section>
+
+            <div class="demo-block display-demo">
+                <h4>Display: none</h4>
+                <div>
+                    <span class="square">1</span>
+                    <span class="square">2</span>
+                    <span class="square">3</span>
+                    <span class="square">4</span>
+                    <span class="square square-5">5</span>
+                    <span class="square">6</span>
+                </div>
+            </div>
+
+            <div class="demo-block visibility-demo">
+                <h4>Visibility: hidden</h4>
+                <div>
+                    <span class="square">1</span>
+                    <span class="square">2</span>
+                    <span class="square">3</span>
+                    <span class="square">4</span>
+                    <span class="square square-5">5</span>
+                    <span class="square">6</span>
+                </div>
+            </div>
+
+            <div class="demo-block overflow-demo">
+                <h4>Overflow</h4>
+                <div>
+                    <div class="overflow-container overflow-visible">
+                        <p><strong>visible</strong><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+                            dolores natus deserunt, enim suscipit ratione nobis laudantium? Vero quae, nemo a eaque ut
+                            quia neque perspiciatis</p>
+                    </div>
+                    <div class="overflow-container overflow-hidden">
+                        <p><strong>hidden</strong><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+                            dolores natus deserunt, enim suscipit ratione nobis laudantium? Vero quae, nemo a eaque ut
+                            quia neque perspiciatis</p>
+                    </div>
+                    <div class="overflow-container overflow-scroll">
+                        <p><strong>scroll</strong><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+                            dolores natus deserunt, enim suscipit ratione nobis laudantium? Vero quae, nemo a eaque ut
+                            quia neque perspiciatis</p>
+                    </div>
+                    <div class="overflow-container overflow-auto">
+                        <p><strong>auto</strong><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+                            dolores natus deserunt, enim suscipit ratione nobis laudantium? Vero quae, nemo a eaque ut
+                            quia neque perspiciatis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Z-INDEX ===== -->
+            <div class="demo-block">
+                <h4>Z-Index</h4>
+                <div class="zindex-demo">
+                    <div class="z-box z-box-1">1</div>
+                    <div class="z-box z-box-2">2</div>
+                    <div class="z-box z-box-3">3</div>
+                    <div class="z-box z-box-4">4</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

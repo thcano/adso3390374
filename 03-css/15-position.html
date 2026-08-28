@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 - Position</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        div.box {
+            border: 2px solid #ffffff;
+            background-color: #fff5;
+            border-radius: 4px;
+            height: 150px;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .relative-example {
+            position: relative;
+            top: 30px;
+            left: 40px;
+            background-color: #2196f3;
+            color: white;
+            padding: 12px 18px;
+            width: 200px;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .relative-example small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .absolute-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .absolute-example {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 18px;
+            width: 200px;
+            border-radius: 4px;
+            font-size: 1rem;
+            z-index: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .absolute-example small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .fixed-example {
+            position: fixed;
+            bottom: 200px;
+            right: 200px;
+            background-color: #9c27b0;
+            color: white;
+            padding: 12px 18px;
+            width: 200px;
+            border-radius: 4px;
+            font-size: 1rem;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .fixed-example small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .sticky-container {
+            height: 200px;
+            overflow: auto;
+            background-color: #f0f0f042;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .sticky-example {
+            position: sticky;
+            top: 0;
+            background-color: #e91e63;
+            color: white;
+            padding: 12px 18px;
+            width: 100%;
+            z-index: 10;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .sticky-example small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .sticky-container p {
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .fixed-note {
+            margin: 10px 0 0 0;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>15 - Position</h1>
+            <ul>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </header>
+        <section>
+
+            <h4>Relative</h4>
+            <div class="box">
+                <div class="relative-example">
+                    Elemento relative
+                    <small>top:30px; left:40px</small>
+                </div>
+            </div>
+
+            <h4>Absolute</h4>
+            <div class="box">
+                <div class="absolute-wrapper">
+                    <div class="absolute-example">
+                        Elemento absolute
+                        <small>top:20px; right:20px</small>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Fixed</h4>
+            <div class="box">
+                <div class="fixed-example">
+                    Elemento fixed
+                    <small>bottom:200px; right:200px</small>
+                </div>
+                <p class="fixed-note">(El elemento está fijo en la ventana, abajo a la derecha)</p>
+            </div>
+
+            <!-- STICKY -->
+            <h4>Sticky</h4>
+            <div class="sticky-container">
+                <div class="sticky-example">
+                    Elemento sticky
+                    <small>se pega arriba al hacer scroll</small>
+                </div>
+                <p>Este contenedor tiene scroll vertical. Desplázate para ver cómo el elemento sticky se fija en la
+                    parte superior.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

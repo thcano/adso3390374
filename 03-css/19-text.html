@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19 - Text</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        /* Estilos base */
+        .text-section {
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-section:last-child {
+            border-bottom: none;
+        }
+
+        .text-section h4 {
+            margin: 0 0 8px 0;
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            font-size: 1.1rem;
+        }
+
+        .text-section p {
+            margin: 6px 0;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        /* ===== ALIGN ===== */
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-justify {
+            text-align: justify;
+        }
+
+        /* ===== LINE HEIGHT - forzamos ancho pequeño para ver saltos ===== */
+        .lineheight-1 {
+            line-height: 1.2;
+            max-width: 250px;
+        }
+
+        .lineheight-2 {
+            line-height: 1.8;
+            max-width: 250px;
+        }
+
+        .lineheight-3 {
+            line-height: 2.5;
+            max-width: 250px;
+        }
+
+        /* ===== DECORATION ===== */
+        .deco-underline {
+            text-decoration: underline;
+        }
+
+        .deco-overline {
+            text-decoration: overline;
+        }
+
+        .deco-line-through {
+            text-decoration: line-through;
+        }
+
+        .deco-none {
+            text-decoration: none;
+        }
+
+        /* ===== TRANSFORM ===== */
+        .transform-uppercase {
+            text-transform: uppercase;
+        }
+
+        .transform-lowercase {
+            text-transform: lowercase;
+        }
+
+        .transform-capitalize {
+            text-transform: capitalize;
+        }
+
+        /* ===== INDENT ===== */
+        .indent-demo {
+            padding-left: 2.5em;
+        }
+
+        /* ===== SPACING ===== */
+        .spacing-demo {
+            letter-spacing: 2px;
+            word-spacing: 8px;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>19 - Text</h1>
+            <ul>
+                <li>Align</li>
+                <li>Line Height</li>
+                <li>Decoration</li>
+                <li>Transform</li>
+                <li>Indent</li>
+                <li>Spacing (word/letter)</li>
+            </ul>
+        </header>
+        <section>
+
+            <!-- ALIGN -->
+            <div class="text-section">
+                <h4>Align</h4>
+                <p class="align-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="align-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <!-- LINE HEIGHT (con texto largo y ancho reducido) -->
+            <div class="text-section">
+                <h4>Line Height</h4>
+                <p class="lineheight-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="lineheight-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="lineheight-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <!-- DECORATION -->
+            <div class="text-section">
+                <h4>Decoration</h4>
+                <p class="deco-underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="deco-overline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="deco-line-through">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="deco-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <!-- TRANSFORM -->
+            <div class="text-section">
+                <h4>Transform</h4>
+                <p class="transform-uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="transform-lowercase">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
+                <p class="transform-capitalize">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <!-- INDENT -->
+            <div class="text-section">
+                <h4>Indent</h4>
+                <p class="indent-demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <!-- SPACING (único) -->
+            <div class="text-section">
+                <h4>Spacing</h4>
+                <p class="spacing-demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

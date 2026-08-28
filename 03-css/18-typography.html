@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 - Typografhy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        .typo-section {
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .typo-section:last-child {
+            border-bottom: none;
+        }
+
+        .typo-section h4 {
+            margin: 0 0 8px 0;
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            font-size: 1.1rem;
+        }
+
+        .typo-section p {
+            margin: 6px 0;
+            line-height: 1.6;
+        }
+
+        .color-demo {
+            color: #e67e22;
+        }
+
+        .family-demo {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .size-demo {
+            font-size: 2rem;
+        }
+
+        .weight-light {
+            font-weight: 300;
+        }
+
+        .weight-regular {
+            font-weight: 400;
+        }
+
+        .weight-bold {
+            font-weight: 700;
+        }
+
+        .style-normal {
+            font-style: normal;
+        }
+
+        .style-italic {
+            font-style: italic;
+        }
+
+        .style-oblique {
+            font-style: oblique;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            color: #999;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>18 - Typografhy</h1>
+            <ul>
+                <li>- Color</li>
+                <li>- Family</li>
+                <li>- Size</li>
+                <li>- Weight</li>
+                <li>- Style</li>
+            </ul>
+        </header>
+        <section>
+
+            <div class="typo-section">
+                <h4>Color <span class="label">(color: #e67e22)</span></h4>
+                <p class="color-demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="typo-section">
+                <h4>Font Family <span class="label">(font-family: 'Roboto', sans-serif)</span></h4>
+                <p class="family-demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="typo-section">
+                <h4>Font Size <span class="label">(font-size: 2rem)</span></h4>
+                <p class="size-demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="typo-section">
+                <h4>Font Weight</h4>
+                <p class="weight-light">Light (300) — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="weight-regular">Regular (400) — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="weight-bold">Bold (700) — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="typo-section">
+                <h4>Font Style</h4>
+                <p class="style-normal">Normal — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="style-italic">Italic — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="style-oblique">Oblique — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
