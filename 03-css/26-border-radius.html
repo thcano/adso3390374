@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>26 - Border Radius</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            div {
+                border: 4px solid #fff;
+                background-color: #663399;
+                height: 200px;
+                margin: 0 auto;
+                width: 200px;
+
+                &.bradius1 {
+                    border-radius: 50%;
+                }
+
+                &.bradius2 {
+                    border-radius: 40px 0;
+                }
+
+                &.bradius3 {
+                    border-radius: 140px 0 0 140px;
+                }
+
+                &.bradius4 {
+                    border-radius: 140px 0 140px 140px;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body class="css">
