@@ -6,6 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>27 - Box Shadow</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            div.box {
+                border: 2px solid #fff;
+                height: 160px;
+                margin: 2rem auto;
+                width: 280px;
+
+                &.box1 {
+                    box-shadow: 0 0 12px #fff
+                }
+
+                &.box2 {
+                    box-shadow: -10px -10px 24px 0 #fff
+                }
+
+                &.box3 {
+                    box-shadow: 0 0 20px #fff inset;
+                }
+
+                &.box4 {
+                    width: 160px;
+                    height: 160px;
+                    box-shadow: 0 0 0 6px #ffcd00,
+                        12px 12px 0 6px #003087,
+                        24px 24px 0 6px #c8102e;
+                }
+            }
+
+            div.images {
+                img {
+                    width: 150px;
+
+                    &:first-child {
+                        box-shadow: 0 0 18px #fff
+                    }
+
+                    &:last-child {
+                        width: 150px;
+                        padding-left: 2rem;
+                        filter: drop-shadow(0 0 6px #fff);
+                    }
+                }
+            }
+        }
+    </style>
 </head>
 
 <body class="css">
@@ -22,7 +68,19 @@
             <h3>Property attaches one or more shadows to an element.</h3>
         </header>
         <section>
-
+            <h4>box-shadow: 0 0 12px #fff</h4>
+            <div class="box box1"></div>
+            <h4>box-shadow: -10px -10px 24px 0 #fff</h4>
+            <div class="box box2"></div>
+            <h4>box-shadow: 0 0 20px #fff inset</h4>
+            <div class="box box3"></div>
+            <h4>box-shadow: multiple</h4>
+            <div class="box box4"></div>
+            <h4>box-shadow VS drop-shadow()</h4>
+            <div class="images">
+                <img src="imgs/mario.png">
+                <img src="imgs/wario.webp">
+            </div>
         </section>
     </main>
 </body>
