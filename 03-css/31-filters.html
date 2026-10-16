@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 - Filters</title>
+    <!-- LINK OF STYLE -->
+    <link rel="stylesheet" href="/src/css/master.css">
+    <style>
+        img.filter {
+            display: flex;
+            margin-inline: auto;
+            width: 320px;
+            transition: all 0.6s ease-in;
+        }
+
+        img.filter:hover {
+            filter: none;
+        }
+
+        img.filter1 {
+            filter: grayscale(1)
+        }
+
+        img.filter2 {
+            filter: blur(6px);
+        }
+
+        img.filter3 {
+            filter: sepia(1);
+        }
+
+        img.filter4 {
+            filter: brightness(2);
+        }
+
+        img.filter5 {
+            filter: invert(5);
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>31 - Filters</h1>
+            <h2> Property (filter) applying graphical transformations (e.g., blur(), grayscale(), contrast(),
+                drop-shadow()) to elements before display.
+            </h2>
+        </header>
+        <section>
+            <h4>GrayScale</h4>
+            <img class="filter filter1" src="imgs/inosuke.png" alt="Inosuke Grayscale">
+            <h4>Blur</h4>
+            <img class="filter filter2" src="imgs/inosuke.png" alt="Inosuke Blur">
+            <h4>Sepia</h4>
+            <img class="filter filter3" src="imgs/inosuke.png" alt="Inosuke Sepia">
+            <h4>Brightness</h4>
+            <img class="filter filter4" src="imgs/inosuke.png" alt="Inosuke Brightness">
+            <h4>Invert</h4>
+            <img class="filter filter5" src="imgs/inosuke.png" alt="Inosuke Invert">
+        </section>
+    </main>
+</body>
+
+</html>
