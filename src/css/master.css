@@ -81,6 +81,7 @@ body {
   main {
     padding: 1rem;
     width: 380px;
+    color: #fff9;
 
     /* Header */
     header {
@@ -114,7 +115,7 @@ body {
 
       h1 {
         font-weight: 800;
-        border-bottom: 2px solid rgb(0, 0, 0);
+        border-bottom: 2px solid #fff9;
       }
 
       h2 {
