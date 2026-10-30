@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 - Media Queries</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap");
+
+        * {
+            transition: all 0.5s ease;
+
+        }
+
+        body {
+            background-color: #013571;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+            padding: 1rem;
+
+            main {
+                border: 10px solid #fff;
+                padding: 1rem;
+                margin: 0 auto;
+                width: 1200px;
+                /*  1280px - (20px + 32px) */
+
+                header {
+                    figure.logo {
+                        background: url(imgs/pepsi01.png) no-repeat center;
+                        display: block;
+                        margin: 0 auto;
+                        padding: 0;
+                        height: 354px;
+                        width: 919px;
+                    }
+                }
+
+                menu {
+                    padding: 0;
+
+                    a:is(:link, :visited) {
+                        background-color: #fff;
+                        color: #013571;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 0.4rem 0.8rem;
+                        display: inline-block;
+                        width: 204px;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            transform: translateY(-8px) scale(1.02);
+                        }
+                    }
+                }
+            }
+
+            section {
+                h2 {
+                    text-align: center;
+                    font-size: 2.8rem;
+                    font-weight: 400;
+                }
+
+                h2:nth-of-type(2) {
+                    display: none;
+                }
+
+                h2:last-of-type {
+                    display: none;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+
+        /* Breakpoint: 1280px */
+        @media (max-width: 1280px) {
+
+            body {
+                main {
+                    width: 800px;
+
+                    header {
+                        figure.logo {
+                            background: url(/03-css/imgs/pepsi02.png) no-repeat center;
+                            height: 370px;
+                            width: 349px;
+                        }
+
+                        menu {
+                            a:is(:link, :visited) {
+                                width: 124px;
+                            }
+                        }
+                    }
+
+                    section {
+                        h2:first-of-type {
+                            display: none;
+                        }
+
+                        h2:nth-of-type(2) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Breakpoint < 880px */
+        @media(max-width: 880px) {
+            body {
+                main {
+                    width: 380px;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/pepsi03.png) no-repeat center;
+                            height: 156px;
+                            width: 162px;
+                        }
+
+                        menu {
+                            a:is(:link, :visited) {
+                                display: block;
+                                width: 350px;
+                                margin-bottom: 0.2rem;
+                            }
+                        }
+                    }
+
+                    section {
+                        h2:nth-of-type(2) {
+                            display: none;
+                        }
+
+                        h2:last-of-type {
+                            font-size: 2rem;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </menu>
+        </header>
+        <section>
+            <h2>Desktop: (> 1280px)</h2>
+            <h2>Tablet: (> 800px < 1280px)</h2>
+                    <h2>Mobile: (< 800px)</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex nesciunt voluptas
+                                distinctio reiciendis libero velit quod recusandae nulla! A saepe earum optio vitae,
+                                reiciendis soluta aut aspernatur modi quasi ab porro commodi molestias vel, nisi id
+                                pariatur officia magni sit? Adipisci id laboriosam earum, nam magnam atque debitis eum
+                                similique quidem, dolores porro aperiam quae libero cupiditate pariatur, ea eveniet
+                                voluptas quisquam nobis illum unde maxime distinctio aliquam. Soluta enim assumenda quo
+                                aliquid culpa, vero labore animi saepe voluptas nemo expedita recusandae temporibus
+                                aperiam? Facilis accusantium quidem unde illum officiis laboriosam inventore voluptate
+                                veniam iste. Sunt aut esse quis vel eos aspernatur, blanditiis nisi cum, id quam dolores
+                                provident porro! Ducimus, voluptates molestias laboriosam illum aperiam totam non qui
+                                ut.
+                            </p>
+        </section>
+    </main>
+</body>
+
+</html>
