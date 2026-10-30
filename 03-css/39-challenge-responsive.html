@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39 Challenge Responsive</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            transition: all 0.5s ease;
+        }
+
+        body {
+            background: #000c url(imgs/responsive/fondo.jpg) no-repeat center -200px /cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main {
+            backdrop-filter: blur(8px);
+            margin: 0px auto;
+            width: 1280px;
+        }
+
+        header div.logo {
+            background: url(imgs/responsive/adso-logo.png) no-repeat center;
+            background-size: contain;
+            height: 360px;
+        }
+
+        section.boxes {
+            margin-top: 40px;
+        }
+
+        section.boxes div {
+            display: inline-block;
+            height: 280px;
+            margin-right: 28px;
+            position: relative;
+            width: 280px;
+        }
+
+        section.boxes {
+            color: #ff8800;
+        }
+
+        section.boxes div:last-child {
+            margin-right: 0px;
+        }
+
+        section.boxes div:nth-child(1) {
+            background: url(imgs/responsive/coste.png) no-repeat center;
+            background-size: cover;
+        }
+
+        section.boxes div:nth-child(2) {
+            background: url(imgs/responsive/herin.png) no-repeat center;
+            background-size: cover;
+        }
+
+        section.boxes div:nth-child(3) {
+            background: url(imgs/responsive/juli.png) no-repeat center;
+            background-size: cover;
+        }
+
+        section.boxes div:nth-child(4) {
+            background: url(imgs/responsive/karen.png) no-repeat center;
+            background-size: cover;
+        }
+
+        section.boxes div p {
+            background-color: #000b;
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            border-top: 2px solid #ff8800;
+            color: #ff8800;
+            bottom: 0;
+            font-size: 1.4rem;
+            height: 20px;
+            margin: 0px;
+            padding: 20px 20px 30px 20px;
+            position: absolute;
+            text-align: center;
+            width: 240px;
+            transition: all 0.4s ease-in;
+        }
+
+        section.boxes div:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        section.boxes div:hover p {
+            height: 60px;
+        }
+
+        footer {
+            margin-top: 40px;
+        }
+
+        footer article {
+            background-color: #0006;
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            height: 280px;
+            position: relative;
+            margin: 50px 28px;
+        }
+
+        footer article figure {
+            height: 280px;
+            margin: 0px;
+            width: 280px;
+        }
+
+        footer article.articulo1 figure {
+            background: #0009 url(imgs/responsive/herin.png) no-repeat center /contain;
+        }
+
+        footer article.articulo2 figure {
+            background: #0009 url(imgs/responsive/karen.png) no-repeat center /contain;
+        }
+
+        footer article figure,
+        footer article div {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        footer article div {
+            margin-left: 28px;
+            width: 600px;
+        }
+
+        footer article div h2 {
+            border-bottom: 2px solid #ff8800;
+            color: #fff;
+            font-size: 2rem;
+            margin: 20px 0px;
+        }
+
+        footer article div p {
+            color: #fff9;
+            line-height: 1.4em;
+            text-align: justify;
+        }
+
+        @media (max-width: 1290px) {
+            main {
+                width: 680px;
+            }
+
+            section.boxes div {
+                margin: 28px;
+            }
+
+            footer article div {
+                width: 280px;
+            }
+
+            footer article div h2 {
+                font-size: 1.4rem;
+            }
+
+            footer article div p {
+                overflow: scroll;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 690px) {
+            body {
+                background: url(imgs/responsive/bg.png) no-repeat center /cover;
+                background-attachment: fixed;
+            }
+
+            main {
+                width: 480px;
+            }
+
+            section.boxes div {
+                display: block;
+                margin: 28px auto !important;
+                width: 90%;
+                height: 340px;
+            }
+
+            section.boxes {
+                color: #00ff22;
+            }
+
+            section.boxes div p {
+                height: 20px;
+                width: 392px;
+            }
+
+            footer article {
+                height: 580px;
+                margin: 40px auto;
+                width: 90%;
+            }
+
+            footer article figure {
+                background-size: 180%;
+            }
+
+            footer article figure,
+            footer article div {
+                display: block;
+                width: 100%;
+            }
+
+            footer article div {
+                margin-left: 0px;
+            }
+
+            footer article div h2 {
+                text-indent: 0.8rem;
+            }
+
+            footer article div p {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="logo"></div>
+        </header>
+        <section class="boxes">
+            <div class="box1">
+                <p>Luis</p>
+            </div>
+            <div class="box2">
+                <p>Herin</p>
+            </div>
+            <div class="box3">
+                <p>Juli</p>
+            </div>
+            <div class="box4">
+                <p>Karen</p>
+            </div>
+        </section>
+        <footer>
+            <article class="articulo1">
+                <figure></figure>
+                <div class="content">
+                    <h2> HERIN </h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae error excepturi consectetur
+                        aperiam totam voluptates ea nisi eaque sequi quidem esse illum sapiente non commodi a magnam
+                        atque, autem corrupti est libero veritatis natus? Perspiciatis odit ipsam placeat veritatis
+                        eius.
+                    </p>
+                </div>
+            </article>
+            <article class="articulo2">
+                <figure></figure>
+                <div class="content">
+                    <h2> KAREN </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, soluta facilis molestiae
+                        dolorum eaque nam. Eveniet laboriosam aperiam, omnis maxime facilis et culpa deleniti voluptatem
+                        odio reprehenderit labore quos ullam, quo repudiandae nemo quibusdam quas!
+                    </p>
+                </div>
+            </article>
+        </footer>
+    </main>
+</body>
+
+</html>
