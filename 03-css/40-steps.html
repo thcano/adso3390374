@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40-Steps</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        :root {
+            --size: 256px;
+        }
+
+        body{
+            overflow-y: hidden;
+        }
+
+        section {
+            div.bg {
+                background: url(imgs/bg-steps.png) no-repeat center;
+                background-size: cover;
+                border-radius: 12px;
+                corner-shape: squircle;
+                outline: 4px solid #000;
+                position: relative;
+                height: 510px;
+                width: 320px;
+
+                div.instructions {
+                    background-color: #000a;
+                    border-radius: 12px;
+                    corner-shape: squircle;
+                    color: #fff;
+                    text-align: center;
+                    position: absolute;
+                    padding: 0.4rem;
+                    top: 0.6rem;
+                    left: 0.6rem;
+                    width: 300px;
+                }
+
+                div#trainer {
+                    background: url(imgs/steps-all.png) no-repeat;
+                    height: var(--size);
+                    position: absolute;
+                    bottom: 1rem;
+                    transform: scale(.8);
+                    left: 2rem;
+                    width: var(--size);
+                    animation: 0.5s animTrainer steps(4) infinite;
+
+                    &.front {
+                        background-position-y: 0;
+                    }
+
+                    &.left {
+                        background-position-y: calc(var(--size) * -1);
+                    }
+
+                    &.right {
+                        background-position-y: calc(var(--size) * -2);
+                    }
+
+                    &.back {
+                        background-position-y: calc(var(--size) * -3);
+                    }
+                }
+            }
+        }
+
+        @keyframes animTrainer {
+            100% {
+                background-position-x: -1024px;
+            }
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>40-Steps</h1>
+            <h3>Used in CSS animations to split transitions into discrete frames, commonly used for frame-by-frame
+                sprite animations.</h3>
+        </header>
+        <section>
+            <div class="bg">
+                <div class="instructions">
+                    Please press the arrow keys: <br>
+                    &larr; &uarr; &rarr; &darr;
+                </div>
+                <div id="trainer" class="front"></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const trainer = document.getElementById('trainer');
+        document.addEventListener('keyup', function (e) {
+            // console.log(e.keyCode);
+            switch (e.keyCode) {
+                case 37: // Arrow Left
+                    trainer.className = '';
+                    trainer.classList.add('left');
+                    break;
+                case 38: // Arrow Up
+                    trainer.className = '';
+                    trainer.classList.add('back');
+                    break;
+                case 39: // Arrow Right
+                    trainer.className = '';
+                    trainer.classList.add('right');
+                    break;
+                case 40: // Arrow Down
+                    trainer.className = '';
+                    trainer.classList.add('front');
+                    break;
+            }
+        })
+
+    </script>
+</body>
+
+</html>
