@@ -9,62 +9,151 @@
     <style>
         body main section {
             min-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
-        main section div.grid1 img {
-            border: none;
-            margin: 0;
+        header.mainmenu {
+            text-align: center;
         }
 
         div.grid1 {
             display: grid;
             margin-bottom: 2rem;
             grid-gap: 0.6rem;
-            grid-template-areas: "one  two three"
-                "four two five"
-                "six six seven";
+            grid-template-areas: "uno dos tres"
+                "cuatro dos cinco"
+                "seis seis siete";
             justify-content: center;
             overflow: hidden;
         }
 
         div.grid1 img {
-            border-radius: 4px;
             width: 128px;
             height: 128px;
-            object-position: center 80%;
             object-fit: cover;
+            object-position: center 80%;
             display: block;
+            border: none;
+            margin: 0;
+            border: 2px solid;
+            border-radius: 4px;
         }
 
-        div.grid1 img.img01 {
-            grid-area: one;
+        div.grid1 img.img1 {
+            grid-area: uno;
         }
 
-        div.grid1 img.img02 {
+        div.grid1 img.img2 {
             height: calc(128px * 2 + 0.6rem);
-            grid-area: two;
+            grid-area: dos;
         }
 
-        div.grid1 img.img03 {
-            grid-area: three;
+        div.grid1 img.img3 {
+            grid-area: tres;
             object-position: right center;
         }
 
-        div.grid1 img.img04 {
-            grid-area: four;
+        div.grid1 img.img4 {
+            grid-area: cuatro;
         }
 
-        div.grid1 img.img05 {
-            grid-area: five;
-        }
-
-        div.grid1 img.img06 {
-            grid-area: six;
+        div.grid1 img.img6 {
+            grid-area: seis;
             width: calc(128px * 2 + 0.6rem);
         }
 
-        div.grid1 img.img07 {
-            grid-area: seven;
+        div.grid1 img.img7 {
+            grid-area: siete;
+        }
+
+        .contenedor-img5 {
+            grid-area: cinco;
+            width: 128px;
+            height: 128px;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            border: 2px solid;
+        }
+
+        .contenedor-img5 img.img5 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            transform: scale(1.50);
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        div.grid2 {
+            display: grid;
+            margin-bottom: 0.2rem;
+            grid-gap: 0.6rem;
+            grid-template-areas: "uno uno dos tres"
+                "uno uno cuatro cuatro"
+                "cinco seis cuatro cuatro";
+        }
+
+        div.grid2 img {
+            border-radius: 4px;
+            outline: 2px solid #fff;
+            height: 94px;
+            object-fit: cover;
+            width: 94px;
+            object-position: center 80%;
+        }
+
+
+        div.grid2 img.img8 {
+            height: calc(94px * 2 + 0.6rem);
+            width: calc(94px * 2 + 0.6rem);
+            grid-area: uno;
+
+        }
+
+        div.grid2 img.img9 {
+            grid-area: dos;
+        }
+
+        div.grid2 img.img10 {
+            grid-area: tres;
+            object-position: right center;
+        }
+
+        div.grid2 img.img11 {
+            height: calc(94px * 2 + 0.6rem);
+            width: calc(94px * 2 + 0.6rem);
+            grid-area: cuatro;
+        }
+
+        div.grid2 img.img12 {
+            grid-area: cinco;
+        }
+
+        .contenedor-img12 {
+            grid-area: cinco;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            border: 2px solid;
+        }
+
+        .contenedor-img12 img.img12 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            transform: scale(1.50);
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        div.grid2 img.img13 {
+            grid-area: seis;
         }
     </style>
 </head>
@@ -85,14 +174,27 @@
         </header>
         <section>
             <div class="grid1">
-                <img class="img01" src="imgs/grid/grid-01.jpg" alt="01">
-                <img class="img02" src="imgs/grid/grid-02.jpg" alt="02">
-                <img class="img03" src="imgs/grid/grid-03.jpg" alt="03">
-                <img class="img04" src="imgs/grid/gris-04.png" alt="04">
-                <img class="img05" src="imgs/grid/gris-05.png" alt="05">
-                <img class="img06" src="imgs/grid/grid-06.webp" alt="06">
-                <img class="img07" src="imgs/grid/gris-07.png" alt="07">
+                <img class="img1" src="imgs/grid/grid-01.jpg" alt="01">
+                <img class="img2" src="imgs/grid/grid-02.jpg" alt="02">
+                <img class="img3" src="imgs/grid/grid-03.jpg" alt="03">
+                <img class="img4" src="imgs/grid/grid-04.webp" alt="04">
+                <div class="contenedor-img5">
+                    <img class="img5" src="imgs/grid/grid-05.jpg" alt="05">
+                </div>
+                <img class="img6" src="imgs/grid/grid-06.webp" alt="06">
+                <img class="img7" src="imgs/grid/grid-07.webp" alt="07">
             </div>
+            <div class="grid2">
+                <img class="img8" src="imgs/grid/grid-01.jpg" alt="08">
+                <img class="img9" src="imgs/grid/grid-02.jpg" alt="09">
+                <img class="img10" src="imgs/grid/grid-03.jpg" alt="10">
+                <img class="img11" src="imgs/grid/grid-04.webp" alt="11">
+                <div class="contenedor-img12">
+                    <img class="img12" src="imgs/grid/grid-05.jpg" alt="12">
+                </div>
+                <img class="img13" src="imgs/grid/grid-06.webp" alt="13">
+            </div>
+
         </section>
     </main>
 </body>
